@@ -1,90 +1,127 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Yonathan Mendenhall | About Me</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <style>
+    /* Global Styles */
     * {
       box-sizing: border-box;
-    }
-    body {
       margin: 0;
       padding: 0;
+    }
+
+    body {
       font-family: 'Inter', sans-serif;
-      background-color: #f2f5f9;
-      color: #333;
+      line-height: 1.6;
+      background: linear-gradient(to right, #0077cc, #004aad);
+      color: #fff;
       display: flex;
       justify-content: center;
-      align-items: flex-start;
+      align-items: center;
       min-height: 100vh;
+      padding: 20px;
+      overflow-x: hidden;
     }
+
     .container {
-      background-color: #fff;
-      margin-top: 3rem;
-      padding: 2.5rem;
-      border-radius: 16px;
+      background: #fff;
+      color: #333;
+      border-radius: 12px;
+      padding: 30px;
       max-width: 800px;
-      width: 90%;
-      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
-      animation: fadeIn 1s ease-out;
+      width: 100%;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      animation: fadeIn 1.2s ease-in-out;
     }
+
     h1 {
       font-size: 2.5rem;
-      margin-bottom: 0.25rem;
-      transition: color 0.3s ease;
-    }
-    h1:hover {
       color: #0077cc;
+      margin-bottom: 10px;
+      text-align: center;
+      animation: slideInFromLeft 1.2s ease-in-out;
+      transition: color 0.3s ease, transform 0.3s ease;
     }
+
+    h1:hover {
+      color: #004aad;
+      transform: scale(1.05);
+    }
+
     h2 {
       font-size: 1.25rem;
       color: #666;
-      margin-bottom: 1.5rem;
+      text-align: center;
+      margin-bottom: 20px;
+      animation: fadeIn 1.5s ease-in-out;
     }
+
     p {
-      line-height: 1.7;
-      font-size: 1.05rem;
-      margin-bottom: 1.25rem;
-      opacity: 0;
-      transform: translateY(20px);
-      animation: slideUp 0.8s ease forwards;
+      font-size: 1rem;
+      margin-bottom: 15px;
+      line-height: 1.8;
+      animation: slideInFromRight 1.5s ease-in-out;
     }
-    p:nth-of-type(1) { animation-delay: 0.2s; }
-    p:nth-of-type(2) { animation-delay: 0.4s; }
-    p:nth-of-type(3) { animation-delay: 0.6s; }
-    p:nth-of-type(4) { animation-delay: 0.8s; }
-    p:nth-of-type(5) { animation-delay: 1s; }
+
+    strong {
+      color: #0077cc;
+    }
 
     .footer {
-      margin-top: 2rem;
-      font-size: 0.9rem;
+      text-align: center;
+      font-size: 0.85rem;
       color: #999;
-      opacity: 0;
-      animation: fadeIn 1s ease 1.2s forwards;
+      margin-top: 20px;
+      animation: fadeIn 2s ease-in-out;
     }
 
+    /* Animations */
     @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
-    @keyframes slideUp {
+      from {
+        opacity: 0;
+      }
       to {
         opacity: 1;
-        transform: translateY(0);
       }
     }
 
-    @media (max-width: 600px) {
-      .container {
-        padding: 1.5rem;
+    @keyframes slideInFromLeft {
+      from {
+        transform: translateX(-100%);
+        opacity: 0;
       }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideInFromRight {
+      from {
+        transform: translateX(100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 600px) {
       h1 {
         font-size: 2rem;
+      }
+
+      h2 {
+        font-size: 1rem;
+      }
+
+      p {
+        font-size: 0.95rem;
       }
     }
   </style>
@@ -94,18 +131,18 @@
     <h1>Yonathan Mendenhall</h1>
     <h2>Anaheim, California</h2>
 
-    <p>Hey there! I'm a 24-year-old currently in my second year of school, majoring in Computer Science. My passion for technology runs deep — ever since I was a kid, I’ve loved building and understanding how things work.</p>
+    <p>Hello! My name is Yonathan Mendenhall, and I’m a 24-year-old currently in my second year of school, majoring in <strong>Computer Science</strong>. Ever since I was a kid, I’ve been fascinated by technology and its endless potential.</p>
 
-    <p>At 14, I launched my first project: an online simulation game that used MariaDB to handle users' login information. That was the beginning of my journey into backend development and data management.</p>
+    <p>At the age of 14, I embarked on my first project: an online simulation game. Using MariaDB, I managed user information such as usernames and passwords, which ignited my passion for backend development and data management.</p>
 
-    <p>At 15, I started my own side business unlocking and jailbreaking iPhones — back when that was popular. It gave me early entrepreneurial experience and hands-on technical skills.</p>
+    <p>When I was 15, I started my own small business unlocking and jailbreaking iPhones — a popular trend at the time. This experience gave me invaluable technical skills and an early taste of entrepreneurship.</p>
 
-    <p>I got my first associate role as a Copy Center Tech at Keystone Property Management. That experience changed how I view the corporate world. It helped me realize how much I want to grow professionally, keep learning, and make an impact.</p>
+    <p>My professional journey began with an associate position as a Copy Center Tech at Keystone Property Management. This role changed my perspective on the corporate world, inspiring me to learn more and strive for growth and development within the tech field.</p>
 
-    <p>Today, I’m passionate about tech and driven to grow within a company that values development. My long-term goal is to become a <strong>Data Analyst</strong>, where I can blend my love for data, problem-solving, and technology to create meaningful insights.</p>
+    <p>Today, I am passionate about technology and eager to grow within a company that values innovation and professional development. My ultimate goal is to become a <strong>Data Analyst</strong>, where I can combine my love for data and problem-solving into a fulfilling career.</p>
 
     <div class="footer">
-      &copy; 2025 Yonathan Mendenhall
+      &copy; 2025 Yonathan Mendenhall. All rights reserved.
     </div>
   </div>
 </body>
